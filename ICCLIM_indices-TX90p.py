@@ -58,21 +58,18 @@ dask.config.set({"distributed.worker.memory.spill": "0.9"})
 dask.config.set({"distributed.worker.memory.pause": "0.95"})
 dask.config.set({"distributed.worker.memory.terminate": "0.98"})
 
-
 # In[20]:
-
-# Define input and output file locations
-root        = '/shared/rise_group/User/ci1twx/CMIP6/'
-output_path = '{0}OUTPUT/{1}/'.format(root,index)
-
-
-# In[21]:
 
 # Define index, variable and experiment
 variable = 'tasmax'
 exp      = 'SSP585'
 index    = 'TX90p'
 
+# In[21]:
+
+# Define input and output file locations
+root        = '/shared/rise_group/User/ci1twx/CMIP6/'
+output_path = '{0}OUTPUT/{1}/'.format(root,index)
 
 # In[22]:
 
