@@ -46,8 +46,8 @@ import cf, cfplot as cfp
 import dask
 from distributed import Client
 memory_limit       = '16GB'
-n_workers          = 1
-threads_per_worker = 2
+n_workers          = 1 # number of cores
+threads_per_worker = 2 # should probably be 1,  HPC does not support multi-threading (pararrelise with MPI, needs to be 1 so that threads aren't competing)
 
 # --OPTION 1--
 client = Client(memory_limit=memory_limit, n_workers=n_workers, threads_per_worker=threads_per_worker)
